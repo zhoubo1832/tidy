@@ -52,8 +52,12 @@ jobs:
       url: https://github.com/zhoubo1832
     steps:        
     - name: java version
-      run: echo 'hello'
+      run: |
+        echo 'book_id: ' ${{secrets.BOOK_ID}}
+        echo 'book_name: ' ${{secrets.BOOK_NAME}}
       
     - name: maven version
-      run: echo 'thanks'
+      run: |
+        echo 'front_color: ' ${{vars.FRONT_COLOR}}
+        echo 'back_color: ' ${{vars.BACK_COLOR}}
      
