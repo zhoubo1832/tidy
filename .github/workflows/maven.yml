@@ -26,5 +26,8 @@ jobs:
       with:
         java-version: '17'
         distribution: 'temurin'
-    - name: Build with Maven
+    - name: java version
       run: java -version
+    - name: maven version
+      run: mvn -v
+      
