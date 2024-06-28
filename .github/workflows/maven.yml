@@ -37,11 +37,11 @@ jobs:
         
     - id: step-3
       name: java version
-      run: echo "test3=hello" >> "${{ GITHUB_OUTPUT }}"
+      run: echo "test3=hello" >> "$GITHUB_OUTPUT"
       
     - id: step4
       name: maven version
-      run: echo "test4=world" >> "${{ GITHUB_OUTPUT }}"
+      run: echo "test4=world" >> "$GITHUB_OUTPUT"
       
   deploy:
     runs-on: ubuntu-latest
