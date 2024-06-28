@@ -32,4 +32,24 @@ jobs:
       
     - name: maven version
       run: mvn -v
+
+  approval:
+    runs-on: ubuntu-latest
+    # environment: develop
+    steps:        
+    - name: java version
+      run: echo 'please'
       
+    - name: maven version
+      run: echo 'approve'
+      
+  deploy:
+    runs-on: ubuntu-latest
+    # environment: develop
+    steps:        
+    - name: java version
+      run: echo 'hello'
+      
+    - name: maven version
+      run: echo 'thanks'
+     
