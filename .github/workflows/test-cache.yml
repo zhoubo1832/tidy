@@ -9,11 +9,14 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        node: [20]
+        node: [10,12,20]
     steps:
       - name: show context
         run: |
-          echo ${{github}}
+          echo ${{strategy.fail-fast}}
+          echo ${{strategy.job-index}}
+          echo ${{strategy.job-total}}
+          echo ${{strategy.max-parallel}}
           
       - name: show envs
         run: |
