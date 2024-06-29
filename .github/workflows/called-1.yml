@@ -26,14 +26,16 @@ jobs:
         run: echo "firstword=hello" >> $GITHUB_OUTPUT
       - id: step2
         run: echo "secondword=world" >> $GITHUB_OUTPUT
-      - id: step3
-        run: echo "${{jobs.example_job.result}}"
+      
 
   final_job:
     name: remoke resources
     runs-on: windows-latest
     
     steps:
+      - id: step3
+        run: echo "${{ jobs.example_job.result }}"
+        
       - id: step4
         name: step 4th
         shell: powershell
