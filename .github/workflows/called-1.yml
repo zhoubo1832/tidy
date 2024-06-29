@@ -43,5 +43,5 @@ jobs:
         run: |
           pwd
           ls
-          ifconfig /all
+          hostname
     
