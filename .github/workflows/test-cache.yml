@@ -7,7 +7,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        node: [20]
+        node: [10, 12, 20]
     steps:
       - uses: actions/setup-node@v2-beta
         with:
