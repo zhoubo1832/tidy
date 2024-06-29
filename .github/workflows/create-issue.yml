@@ -4,7 +4,8 @@ on:
   workflow_dispatch:
   push:
     branches: master
-
+env:
+  GH_TOKEN: ${{ secrets.GITHUB_TOKEN}}
 jobs:
   create_issue:
     if: github.repository == 'zhoubo1832/tidy'
