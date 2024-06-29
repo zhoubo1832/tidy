@@ -11,6 +11,8 @@ jobs:
         os: [ubuntu-latest]
         node: [10,12,20]
     steps:
+      - name: pre action
+        run: echo ${{job.status}}
       - name: show context
         run: |
           echo ${{runner.name}}
@@ -128,3 +130,6 @@ jobs:
       - name: Install
         if: steps.node_modules_cache_id.outputs.cache-hit != 'true'
         run: yarn --check-files --frozen-lockfile --non-interactive
+
+      - name: post action
+        run: echo ${{job.status}}
