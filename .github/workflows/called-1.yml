@@ -35,7 +35,7 @@ jobs:
     steps:
       - id: step3
         name: step 3rd
-        run: echo "${{ job.status }}"
+        run: echo "${{ toJSON(needs) }}"
         
       - id: step4
         name: step 4th
