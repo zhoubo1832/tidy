@@ -7,7 +7,7 @@ on:
 
 jobs:
   create_issue:
-    if: github.repository == 'zhoubo1832/ttidy'
+    if: github.repository == 'zhoubo1832/tidy'
     runs-on: ubuntu-latest
     permissions:
       issues: write
@@ -23,3 +23,6 @@ jobs:
             "body": "This issue was automatically created by the GitHub Action workflow **${{ github.workflow }}**. \n\n The commit hash was: _${{ github.sha }}_."
             }' \
           --fail
+      - name: list issue
+        run: gh issue list
+        
