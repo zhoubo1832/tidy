@@ -31,7 +31,7 @@ jobs:
   final_job:
     name: remoke resources
     runs-on: windows-latest
-    
+    needs: [example_job]
     steps:
       - id: step3
         name: step 3rd
