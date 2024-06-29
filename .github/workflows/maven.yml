@@ -39,7 +39,7 @@ jobs:
       name: java version
       run: echo "test3=ido" >> "$GITHUB_OUTPUT"
       
-    - id: step4
+    - id: step-4
       name: maven version
       run: echo "test4=kame" >> "$GITHUB_OUTPUT"
       
