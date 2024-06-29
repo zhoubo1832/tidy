@@ -11,6 +11,10 @@ jobs:
         os: [ubuntu-latest]
         node: [20]
     steps:
+      - name: show context
+        run: |
+          echo ${{github}}
+          
       - name: show envs
         run: |
           echo "CI: $CI"
