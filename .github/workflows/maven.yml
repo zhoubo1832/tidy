@@ -64,9 +64,7 @@ jobs:
   
     - id: deploy-3
       env:
-        OUTPUT3: ${{ needs.build.outputs.test3 }}
-        OUTPUT4: ${{ needs.build.outputs.test4 }}
-      run: |
-        echo "$OUTPUT3"
-        echo "$OUTPUT4"
+        OUTPUT1: ${{ needs.build.outputs.test3 }}
+        OUTPUT2: ${{ needs.build.outputs.test4 }}
+      run: echo "$OUTPUT1 $OUTPUT2"
       
