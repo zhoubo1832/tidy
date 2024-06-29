@@ -34,7 +34,8 @@ jobs:
     
     steps:
       - id: step3
-        run: echo "${{ jobs.example_job.result }}"
+        name: step 3rd
+        run: echo "${{ job.status }}"
         
       - id: step4
         name: step 4th
