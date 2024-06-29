@@ -1,8 +1,7 @@
 name: try cache
 on: 
   workflow_dispatch:
-  push:
-
+  
 jobs:
   setup:
     runs-on: ${{ matrix.os }}
