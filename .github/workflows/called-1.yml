@@ -27,11 +27,16 @@ jobs:
       - id: step2
         run: echo "secondword=world" >> $GITHUB_OUTPUT
       
-
+  job2:
+    name: job 2nd
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo 'i am job 2'
+      
   final_job:
     name: remoke resources
     runs-on: windows-latest
-    #needs: [example_job]
+    needs: [example_job, job2]
     steps:
       - id: step3
         name: step 3rd
